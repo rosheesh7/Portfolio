@@ -1,0 +1,46 @@
+@import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
+.portfolio-container {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+nav,
+.navbar {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-section .background-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-section > *:not(.background-layer) {
+  position: relative;
+  z-index: 1;
+}
+
+.about-section {
+  background: linear-gradient(to bottom, #04000e, #090016, #09001d);
+  color: white;
+  padding: 100px 2rem;
+  min-height: 100vh;
+}
