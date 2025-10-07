@@ -1,24 +1,142 @@
 .about-container {
   position: absolute;
   color: white;
-  border: 1px solid white;
   max-width: 1500px;
   width: 100%;
-  margin: auto;
+  margin: 150px auto;
 }
 
 .about-title {
+  width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  padding: 50px 0;
+  margin: auto;
 }
 
 .about-title h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .about-title span {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+
+.about-card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 20px 0px;
+  padding: 20px 0px;
+}
+
+.about-card {
+  width: 400px;
+  height: 240px;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 50px 30px rgba(255, 255, 255, 0.1);
+}
+
+.about-card h1 {
+  font-size: 1.65rem;
+  color: #6f3cff;
+  margin-bottom: 10px;
+}
+
+.about-card span {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-title {
+    width: 90%;
+    padding: 30px 0;
+  }
+
+  .about-card-container {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .about-card {
+    width: 320px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-container {
+    margin: 100px auto;
+    text-align: center;
+  }
+
+  .about-title {
+    width: 95%;
+  }
+
+  .about-title h1 {
+    font-size: 2rem;
+  }
+
+  .about-title span {
+    font-size: 1rem;
+  }
+
+  .about-card-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .about-card {
+    width: 85%;
+    padding: 20px;
+  }
+
+  .about-card h1 {
+    font-size: 1.4rem;
+  }
+
+  .about-card span {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-title h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-card {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .about-card span {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
 }
