@@ -3,6 +3,7 @@ import DarkVeil from "./background/DarkVeil.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./sections/Hero.jsx";
 import About from "./sections/About.jsx";
+import Skills from "./sections/Skills.jsx";
 
 const App = () => {
   return (
@@ -20,6 +21,10 @@ const App = () => {
       {/* About section with its own background */}
       <section className="about-section" id="about">
         <About />
+      </section>
+
+      <section className="skill-section" id="skills">
+        <Skills />
       </section>
     </div>
   );
